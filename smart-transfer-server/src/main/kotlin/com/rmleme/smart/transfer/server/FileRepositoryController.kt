@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RestController
 class FileRepositoryController {
 
     @GetMapping("/repository")
-    fun getBucketAccess() = "Successfully got access."
+    fun getRepositoryAccess() = "Successfully got access."
 }
