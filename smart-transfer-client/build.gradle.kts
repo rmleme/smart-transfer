@@ -4,7 +4,6 @@ plugins {
     kotlin("multiplatform")
 }
 
-
 kotlin {
     linuxX64 {
         binaries {
@@ -24,8 +23,8 @@ kotlin {
 
         val linuxX64Test by getting {
             dependencies {
-                implementation("io.kotest:kotest-runner-junit5-jvm:4.0.1")
-                implementation("io.kotest:kotest-assertions-core-jvm:4.0.1")
+                implementation("io.kotest:kotest-runner-junit5-jvm:${rootProject.ext["kotestVersion"]}")
+                implementation("io.kotest:kotest-assertions-core-jvm:${rootProject.ext["kotestVersion"]}")
             }
         }
     }

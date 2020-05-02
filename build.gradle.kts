@@ -10,18 +10,12 @@ allprojects {
 }
 
 plugins {
-    val kotlinVersion = "1.3.72"
-    val springBootVersion = "2.2.6.RELEASE"
-    val springDependencyVersion = "1.0.9.RELEASE"
-
-    kotlin("jvm") version kotlinVersion apply false
-    kotlin("multiplatform") version kotlinVersion apply false
-    kotlin("plugin.spring") version kotlinVersion apply false
-    id("org.springframework.boot") version springBootVersion apply false
-    id("io.spring.dependency-management") version springDependencyVersion apply false
+    kotlin("jvm") apply false
 }
 
 subprojects {
+    ext["kotestVersion"] = project.findProperty("kotestVersion") as String
+
     tasks.withType<Test> {
         useJUnitPlatform()
     }
