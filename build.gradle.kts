@@ -14,6 +14,7 @@ plugins {
 }
 
 subprojects {
+    ext["awsJavaSdkVersion"] = project.findProperty("awsJavaSdkVersion") as String
     ext["kotestVersion"] = project.findProperty("kotestVersion") as String
 
     tasks.withType<Test> {
