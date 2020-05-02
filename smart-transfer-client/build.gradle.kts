@@ -18,6 +18,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("reflect"))
+                implementation("com.amazonaws:aws-java-sdk-s3:${rootProject.ext["awsJavaSdkVersion"]}")
             }
         }
 
