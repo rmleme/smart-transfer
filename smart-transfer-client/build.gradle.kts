@@ -1,32 +1,15 @@
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 plugins {
-    kotlin("multiplatform")
+    kotlin("jvm")
 }
 
-kotlin {
-    linuxX64 {
-        binaries {
-            executable("smart-transfer-client") {
-                entryPoint = "com.rmleme.smart.transfer.client.main"
-            }
-        }
-    }
+dependencies {
+    implementation(kotlin("stdlib"))
+    implementation(kotlin("reflect"))
 
-    sourceSets {
-        val linuxX64Main by getting {
-            dependencies {
-                implementation(kotlin("stdlib"))
-                implementation(kotlin("reflect"))
-                implementation("com.amazonaws:aws-java-sdk-s3:${rootProject.ext["awsJavaSdkVersion"]}")
-            }
-        }
+    implementation("com.amazonaws:aws-java-sdk-s3:${rootProject.ext["awsJavaSdkVersion"]}")
 
-        val linuxX64Test by getting {
-            dependencies {
-                implementation("io.kotest:kotest-runner-junit5-jvm:${rootProject.ext["kotestVersion"]}")
-                implementation("io.kotest:kotest-assertions-core-jvm:${rootProject.ext["kotestVersion"]}")
-            }
-        }
-    }
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:${rootProject.ext["kotestVersion"]}")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:${rootProject.ext["kotestVersion"]}")
 }
