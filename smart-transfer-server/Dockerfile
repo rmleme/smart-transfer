@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:11.0.6
+FROM azul/zulu-openjdk-alpine:11.0.7
 
 RUN mkdir -p /opt/app
 
