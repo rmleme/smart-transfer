@@ -1,4 +1,4 @@
-package com.rmleme.smart.transfer.server
+package org.rmleme.smart.transfer.server
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping

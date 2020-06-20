@@ -20,7 +20,7 @@ dependencies {
 tasks {
     withType<Jar> {
         manifest {
-            attributes["Main-Class"] = "com.rmleme.smart.transfer.client.ClientKt"
+            attributes["Main-Class"] = "org.rmleme.smart.transfer.client.ClientKt"
         }
 
         from(configurations.compileClasspath.get().map { if (it.isDirectory) it else zipTree(it) })

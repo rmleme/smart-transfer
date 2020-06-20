@@ -19,7 +19,7 @@ allprojects {
         jcenter()
     }
 
-    group = "com.rmleme.smart.transfer"
+    group = "org.rmleme.smart.transfer"
     version = "0.0.1"
 }
 

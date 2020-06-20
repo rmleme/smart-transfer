@@ -1,4 +1,4 @@
-package com.rmleme.smart.transfer.server
+package org.rmleme.smart.transfer.server
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

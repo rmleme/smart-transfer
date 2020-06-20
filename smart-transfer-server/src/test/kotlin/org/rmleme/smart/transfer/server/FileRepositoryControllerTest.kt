@@ -1,4 +1,4 @@
-package com.rmleme.smart.transfer.server
+package org.rmleme.smart.transfer.server
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe

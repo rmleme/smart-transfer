@@ -1,4 +1,4 @@
-package com.rmleme.smart.transfer.client
+package org.rmleme.smart.transfer.client
 
 import com.amazonaws.services.s3.transfer.Download
 import com.amazonaws.services.s3.transfer.TransferManager
