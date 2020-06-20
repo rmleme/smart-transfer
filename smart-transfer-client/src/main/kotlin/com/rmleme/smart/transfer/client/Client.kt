@@ -11,7 +11,7 @@ private const val ROOT_DIRECTORY = "/tmp"
 class Client(private val bucket: String) {
 
     fun download(key: String): File {
-        val transferManager: TransferManager = TransferManagerBuilder.standard( ).build()
+        val transferManager: TransferManager = TransferManagerBuilder.standard().build()
         val file = File("$ROOT_DIRECTORY/$key")
         val download: Download = transferManager.download(bucket, key, file)
         download.waitForCompletion()
