@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    extra["awsJavaSdkVersion"] = "1.11.805"
-    extra["kotestVersion"] = "4.0.6"
+    extra["awsJavaSdkVersion"] = "1.11.819"
+    extra["kotestVersion"] = "4.1.1"
 }
 
 plugins {
