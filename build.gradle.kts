@@ -1,16 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    extra["awsJavaSdkVersion"] = "1.11.819"
-    extra["kotestVersion"] = "4.1.1"
+    extra["awsJavaSdkVersion"] = "1.11.842"
+    extra["kotestVersion"] = "4.1.2"
 }
 
 plugins {
-    id("org.jlleitschuh.gradle.ktlint") version "9.2.1" apply false
+    id("org.jlleitschuh.gradle.ktlint") version "9.3.0" apply false
     kotlin("jvm") version "1.3.72" apply false
     kotlin("plugin.spring") version "1.3.72" apply false
-    id("org.springframework.boot") version "2.3.1.RELEASE" apply false
-    id("io.spring.dependency-management") version "1.0.9.RELEASE" apply false
+    id("org.springframework.boot") version "2.3.3.RELEASE" apply false
+    id("io.spring.dependency-management") version "1.0.10.RELEASE" apply false
 }
 
 allprojects {
