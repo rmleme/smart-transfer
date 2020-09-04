@@ -11,6 +11,11 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
 
+    implementation(platform("com.amazonaws:aws-java-sdk-bom:${rootProject.extra["awsJavaSdkVersion"]}"))
+    implementation("com.amazonaws:aws-java-sdk-s3")
+
+    implementation("ch.qos.logback:logback-classic:${rootProject.extra["logbackVersion"]}")
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 

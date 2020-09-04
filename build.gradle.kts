@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
     extra["awsJavaSdkVersion"] = "1.11.842"
     extra["kotestVersion"] = "4.1.2"
+    extra["logbackVersion"] = "1.2.3"
 }
 
 plugins {

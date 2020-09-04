@@ -1,27 +1,37 @@
 package org.rmleme.smart.transfer.client
 
-import com.amazonaws.services.s3.transfer.Download
 import com.amazonaws.services.s3.transfer.TransferManager
 import com.amazonaws.services.s3.transfer.TransferManagerBuilder
 import java.io.File
 import java.nio.file.Files
 
-private const val ROOT_DIRECTORY = "/tmp"
+class Client(private val fileRepositoryName: String) {
 
-class Client(private val bucket: String) {
+    private val transferManager: TransferManager = TransferManagerBuilder.standard().build()
 
     fun download(key: String): File {
-        val transferManager: TransferManager = TransferManagerBuilder.standard().build()
-        val file = File("$ROOT_DIRECTORY/$key")
-        val download: Download = transferManager.download(bucket, key, file)
+        val file = File("/tmp/$key")
+        val download = transferManager.download(fileRepositoryName, key, file)
         download.waitForCompletion()
         transferManager.shutdownNow()
         return file
+    }
+
+    fun upload(file: File) {
+        val upload = transferManager.upload("uploads/$fileRepositoryName", file.name, file)
+        upload.waitForCompletion()
+        transferManager.shutdownNow()
     }
 }
 
 fun main(args: Array<String>) {
     val client = Client("smart-transfer-bucket")
-    val file = client.download("download/arquivo.txt")
+
+    var file = File("/tmp/arquivo.txt")
+    file.writeText("Hello World!")
+
+    client.upload(file)
+
+    file = client.download("downloads/arquivo.txt")
     Files.lines(file.toPath()).forEach { print(it) }
 }

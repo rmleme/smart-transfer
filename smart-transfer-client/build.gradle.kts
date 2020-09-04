@@ -13,6 +13,8 @@ dependencies {
     implementation(platform("com.amazonaws:aws-java-sdk-bom:${rootProject.extra["awsJavaSdkVersion"]}"))
     implementation("com.amazonaws:aws-java-sdk-s3")
 
+    implementation("ch.qos.logback:logback-classic:${rootProject.extra["logbackVersion"]}")
+
     testImplementation("io.kotest:kotest-runner-junit5-jvm:${rootProject.extra["kotestVersion"]}")
     testImplementation("io.kotest:kotest-assertions-core-jvm:${rootProject.extra["kotestVersion"]}")
 }
