@@ -1,11 +1,7 @@
 package org.rmleme.smart.transfer.server
 
-import io.kotest.core.annotation.Ignored
-import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import org.springframework.http.HttpStatus
-import org.springframework.web.util.UriComponentsBuilder
 
 class FileRepositoryControllerTest : StringSpec({
 
