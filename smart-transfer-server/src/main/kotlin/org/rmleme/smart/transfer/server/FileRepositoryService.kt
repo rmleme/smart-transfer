@@ -41,10 +41,12 @@ class FileRepositoryService {
             )
         )
         s3.setBucketTaggingConfiguration(repository.name, BucketTaggingConfiguration(tags))
-        logger.debug("Successfully applied tags to $fileRepositoryName.")
+        logger.debug("Successfully applied tags {${tags[0].allTags.entries.joinToString()}} to $fileRepositoryName.")
     }
 
     companion object {
         private val logger = LoggerFactory.getLogger(FileRepositoryService::class.java)
     }
+
+
 }
