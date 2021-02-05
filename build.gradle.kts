@@ -17,7 +17,6 @@ plugins {
 allprojects {
     repositories {
         mavenCentral()
-        jcenter()
     }
 
     group = "org.rmleme.smart.transfer"
