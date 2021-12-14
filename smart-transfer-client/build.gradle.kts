@@ -1,6 +1,6 @@
 import org.gradle.jvm.tasks.Jar
 
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 plugins {
     kotlin("jvm")

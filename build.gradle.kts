@@ -1,17 +1,17 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    extra["awsJavaSdkVersion"] = "1.11.949"
-    extra["kotestVersion"] = "4.4.0"
-    extra["logbackVersion"] = "1.2.3"
+    extra["awsJavaSdkVersion"] = "1.12.128"
+    extra["kotestVersion"] = "5.0.2"
+    extra["logbackVersion"] = "1.2.7"
 }
 
 plugins {
-    id("org.jlleitschuh.gradle.ktlint") version "9.4.1" apply false
-    kotlin("jvm") version "1.4.30" apply false
-    kotlin("plugin.spring") version "1.3.72" apply false
-    id("org.springframework.boot") version "2.4.2" apply false
-    id("io.spring.dependency-management") version "1.0.10.RELEASE" apply false
+    id("org.jlleitschuh.gradle.ktlint") version "10.2.0" apply false
+    kotlin("jvm") version "1.6.10" apply false
+    kotlin("plugin.spring") version "1.6.10" apply false
+    id("org.springframework.boot") version "2.6.1" apply false
+    id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
 }
 
 allprojects {
@@ -33,7 +33,7 @@ subprojects {
     tasks.withType<KotlinCompile> {
         kotlinOptions {
             freeCompilerArgs = listOf("-Xjsr305=strict")
-            jvmTarget = "1.8"
+            jvmTarget = "1.17"
         }
     }
 }
