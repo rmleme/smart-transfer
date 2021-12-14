@@ -7,11 +7,11 @@ buildscript {
 }
 
 plugins {
-    id("org.jlleitschuh.gradle.ktlint") version "10.2.0" apply false
-    kotlin("jvm") version "1.6.10" apply false
-    kotlin("plugin.spring") version "1.6.10" apply false
-    id("org.springframework.boot") version "2.6.1" apply false
-    id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
+    id("org.jlleitschuh.gradle.ktlint") version "10.2.0"
+    kotlin("jvm") version "1.6.10"
+    kotlin("plugin.spring") version "1.6.10"
+    id("org.springframework.boot") version "2.6.1"
+    id("io.spring.dependency-management") version "1.0.11.RELEASE"
 }
 
 allprojects {
@@ -24,6 +24,8 @@ allprojects {
 }
 
 subprojects {
+    apply(plugin = "kotlin")
+    apply(plugin = "kotlin-spring")
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
 
     tasks.withType<Test> {
@@ -33,7 +35,7 @@ subprojects {
     tasks.withType<KotlinCompile> {
         kotlinOptions {
             freeCompilerArgs = listOf("-Xjsr305=strict")
-            jvmTarget = "1.17"
+            jvmTarget = "${JavaVersion.VERSION_17}"
         }
     }
 }
