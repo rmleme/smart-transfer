@@ -3,7 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
     extra["awsJavaSdkVersion"] = "1.12.128"
     extra["kotestVersion"] = "5.0.2"
-    extra["logbackVersion"] = "1.2.7"
+    extra["logbackVersion"] = "1.2.8"
+    extra["log4jVersion"] = "2.15.0"
 }
 
 plugins {
@@ -27,6 +28,10 @@ subprojects {
     apply(plugin = "kotlin")
     apply(plugin = "kotlin-spring")
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
+
+    dependencies {
+        implementation("org.apache.logging.log4j:log4j-api:${rootProject.extra["log4jVersion"]}")
+    }
 
     tasks.withType<Test> {
         useJUnitPlatform()
