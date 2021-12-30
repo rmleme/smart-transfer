@@ -21,6 +21,8 @@ dependencies {
 
 tasks {
     withType<Jar> {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
         manifest {
             attributes["Main-Class"] = "org.rmleme.smart.transfer.client.ClientKt"
         }
