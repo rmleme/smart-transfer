@@ -4,7 +4,7 @@ buildscript {
     extra["awsJavaSdkVersion"] = "1.12.128"
     extra["kotestVersion"] = "5.0.2"
     extra["logbackVersion"] = "1.2.8"
-    extra["log4jVersion"] = "2.17.0"
+    extra["log4jVersion"] = "2.17.1"
 }
 
 plugins {
