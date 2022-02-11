@@ -1,5 +1,3 @@
-java.sourceCompatibility = JavaVersion.VERSION_17
-
 plugins {
     kotlin("plugin.spring") version Dependency.Versions.springPlugin
     id("org.springframework.boot") version Dependency.Versions.springBoot
