@@ -19,6 +19,7 @@ object Dependency {
         // Tests
         const val kotest = "5.0.2"
 
+        // Code analysis
         const val ktlint = "10.2.0"
     }
 
@@ -39,5 +40,6 @@ object Dependency {
     const val kotestCore = "io.kotest:kotest-assertions-core-jvm:${Versions.kotest}"
     const val springTest = "org.springframework.boot:spring-boot-starter-test"
 
+    // Code analysis
     const val ktlint = "org.jlleitschuh.gradle.ktlint:${Versions.ktlint}"
 }
