@@ -31,6 +31,7 @@ hs_err_pid*
 **/subprojects/docs/src/samples/**/build
 **/subprojects/docs/src/snippets/**/build
 **/subprojects/internal-android-performance-testing/build-android-libs
+!gradle-wrapper.jar
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
