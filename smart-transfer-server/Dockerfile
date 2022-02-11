@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:11.0.7
+FROM openjdk:17-slim
 
 RUN mkdir -p /opt/app
 
