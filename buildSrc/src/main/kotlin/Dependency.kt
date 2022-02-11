@@ -5,22 +5,22 @@ object Dependency {
         const val kotlin = "1.6.10"
 
         // AWS
-        const val aws = "1.12.128"
+        const val aws = "1.12.153"
 
         // Spring
-        const val springBoot = "2.6.1"
+        const val springBoot = "2.6.3"
         const val springPlugin = "1.6.10"
         const val springDependencyMngmt = "1.0.11.RELEASE"
 
         // Logs
-        const val logback = "1.2.8"
+        const val logback = "1.2.10"
         const val log4j = "2.17.1"
 
         // Tests
-        const val kotest = "5.0.2"
+        const val kotest = "5.1.0"
 
         // Code analysis
-        const val ktlint = "10.2.0"
+        const val ktlint = "10.2.1"
     }
 
     // AWS
