@@ -5,7 +5,6 @@ import com.amazonaws.services.s3.transfer.TransferManagerBuilder
 import org.slf4j.LoggerFactory
 import java.io.Closeable
 import java.io.File
-import java.nio.file.Files
 
 private const val DOWNLOAD_FOLDER = "downloads"
 private const val UPLOAD_FOLDER = "uploads"
@@ -40,11 +39,13 @@ fun main(args: Array<String>) {
 
     client.use {
         val fileToUpload = File("${System.getProperty("user.home")}/arquivo_upload.txt")
-        fileToUpload.writeText("[Uploads]\nHello World!")
+        if (!fileToUpload.exists()) {
+            fileToUpload.writeText("[Uploads]\nHello World!")
+        }
         client.upload(fileToUpload)
 
         val fileToDownload = File("${System.getProperty("user.home")}/arquivo_download.txt")
         client.download(fileToDownload)
-        Files.lines(fileToDownload.toPath()).forEach { println(it) }
+        println("Successfully downloaded file ${fileToDownload.name}")
     }
 }
